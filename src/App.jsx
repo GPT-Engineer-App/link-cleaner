@@ -1,14 +1,12 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Index from "./pages/Index.jsx";
+import { Routes, Route } from "react-router-dom";
+import BulkCleaner from "./pages/BulkCleaner";
+import Navigation from "./components/Navigation";
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Index />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Routes>
+    <Route path="/bulk-cleaner" element={<BulkCleaner />} />
+    <Route path="/navigation" element={<Navigation />} />
+  </Routes>
+);
 
 export default App;
